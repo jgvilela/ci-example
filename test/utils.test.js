@@ -8,6 +8,13 @@ describe('Utils', () => {
         });
     });
 
+    describe('gerarNumeroAleatorio', () => {
+        test('inicio nao pode ser negativo', () => {
+            expect(gerarNumeroAleatorio(-5, 20))
+                .toBe(-1);
+        });
+    });
+
     describe('acharCaracter', () => {
         test('comprimento invalido', () => {
             expect(acharCaracter(-4, 'abcde', 'c'))
